@@ -99,5 +99,5 @@
     },
     "include": ["src"],
     "exclude": ["node_modules"],
-    "files": ["types.d.ts"]
+    "files": ["./types.d.ts"]
   }
