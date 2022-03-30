@@ -16,14 +16,14 @@ export const verifyToken = (
   if (!token) {
     return res.status(401).json({
       resp: false,
-      message: "Acceso denegado",
+      message: "Access denied",
     });
   }
 
   try {
     const payload = jwt.verify(
       token,
-      process.env.TOKEN_SECRET || "Frave_Social"
+      process.env.TOKEN_SECRET || "Social"
     ) as IPayload;
 
     req.idPerson = payload.idPerson;
@@ -42,7 +42,7 @@ export const verifyTokenSocket = (token: string): [boolean, string] => {
   try {
     const payload = jwt.verify(
       token,
-      process.env.TOKEN_SECRET || "Frave_Social"
+      process.env.TOKEN_SECRET || "Social"
     ) as IPayload;
 
     return [true, payload.idPerson];

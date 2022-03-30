@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 
 export const generateJsonWebToken = (idPerson: string): string => {
   try {
-    return jwt.sign({ idPerson }, process.env.TOKEN_SECRET || "Frave_Social", {
+    return jwt.sign({ idPerson }, process.env.TOKEN_SECRET || "Social", {
       expiresIn: "24h",
     });
   } catch (err) {
