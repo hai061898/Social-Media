@@ -209,7 +209,7 @@ export const updatePictureProfile = async (
     );
 
     if (imagedb[0].length > 0) {
-      if (imagedb[0][0].image != "avatar-default.png") {
+      if (imagedb[0][0].image != "avatar.jpg") {
         await fs.unlink(path.resolve("uploads/profile/" + imagedb[0][0].image));
       }
     }
